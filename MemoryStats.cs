@@ -29,12 +29,6 @@ public class MemoryStats : MonoBehaviour
     float TotalAllocatedMemory;
     float GetTotalReservedMemory;
     float GetTotalUnusedReservedMemory;
-    float GetMonoHeapSize;
-    float GetMonoUsedSize;
-    float Cached_TotalAllocatedMemory;
-    float Cached_GetTotalReservedMemory;
-    float Cached_GetMonoHeapSize;
-    float Cached_GetMonoUsedSize;
 
 //ASSIGN YOUR UI TEXT OBJECTS HERE:
 
@@ -87,35 +81,11 @@ public class MemoryStats : MonoBehaviour
                 TotalAllocatedMemory,
                 GetTotalReservedMemory,
                 GetTotalUnusedReservedMemory);
-
                 frames = 0;
                 lastInterval = timeNow;
             }
 
             gui.text = stringBuilder.ToString();
-        }
-    }
-
-
-    string unityEditorOnly;
-    public void CacheStats(string fromScene = "")
-    {
-        if (enabled == true)
-        {
-            Cached_TotalAllocatedMemory = TotalAllocatedMemory;
-            Cached_GetTotalReservedMemory = GetTotalReservedMemory;
-            Cached_GetMonoHeapSize = GetMonoHeapSize;
-            Cached_GetMonoUsedSize = GetMonoUsedSize;
-            
-            if (fromScene != "")
-            {
-                fromScene = "LAST SCENE : " + fromScene;
-            }
-
-            if (enabled == true)
-            {
-                gui_cached.text = fromScene + " - MEM ALLOC : " + Cached_TotalAllocatedMemory.ToString() + " mb  /  " + Cached_GetTotalReservedMemory.ToString() + " mb";
-            }
         }
     }
 }
