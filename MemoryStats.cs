@@ -13,8 +13,6 @@ using UnityEngine.Profiling;
 
 public class MemoryStats : MonoBehaviour
 {
-    public static MemoryStats instance; 
-
     StringBuilder stringBuilder;
     
     float interval = 0.5f;
@@ -43,16 +41,6 @@ public class MemoryStats : MonoBehaviour
     public Text gui;
     public Text gui_cached;
     public Text gui_video;
-
-
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-    }
-
 
     void OnEnable()
     {
