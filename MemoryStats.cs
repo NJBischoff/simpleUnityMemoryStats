@@ -49,7 +49,6 @@ public class MemoryStats : MonoBehaviour
     void OnDisable()
     {
         gui.text = "";
-        gui_cached.text = "";
         enabled = false;
     }
 
