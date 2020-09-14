@@ -42,9 +42,6 @@ public class MemoryStats : MonoBehaviour
         frames = 0;
         framesav = 0;
         stringBuilder = new StringBuilder(255, 1024);
-
-        gui_video.text = "VID MEM: " + SystemInfo.graphicsMemorySize.ToString() + " mb" + "\n" + "SYS MEM: " + SystemInfo.systemMemorySize.ToString() + " mb";
-
         enabled = true;
     }
 
