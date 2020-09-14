@@ -30,11 +30,11 @@ public class MemoryStats : MonoBehaviour
     float GetTotalReservedMemory;
     float GetTotalUnusedReservedMemory;
 
-//ASSIGN YOUR UI TEXT OBJECTS HERE:
+//ASSIGN YOUR UI TEXT OBJECT HERE:
 
-    public Text gui;
-    public Text gui_cached;
-    public Text gui_video;
+    public Text gui; // <- Assign
+
+//-------------------------------
 
     void OnEnable()
     {
